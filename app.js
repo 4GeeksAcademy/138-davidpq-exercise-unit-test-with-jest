@@ -10,15 +10,15 @@ let oneEuroIs = {
 }
 
 function fromEuroToDollar(amount) {
-    return Number((amount * oneEuroIs["USD"]).toFixed(2))
+    return amount * oneEuroIs["USD"]
 }
 
 function fromDollarToYen(amount) {
-    return Number((amount * oneEuroIs["JPY"] / oneEuroIs["USD"]).toFixed(2))
+    return amount * oneEuroIs["JPY"] / oneEuroIs["USD"]
 }
 
 function fromYenToPound(amount) {
-    return Number((amount * oneEuroIs["GBP"] / oneEuroIs["JPY"]).toFixed(2))
+    return amount * oneEuroIs["GBP"] / oneEuroIs["JPY"]
 }
 
 module.exports = { sum, fromEuroToDollar, fromDollarToYen, fromYenToPound };
